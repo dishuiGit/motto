@@ -6,7 +6,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/ddliu/motto"
+	"github.com/dishuiGit/motto"
 	"os"
 )
 

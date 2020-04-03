@@ -5,7 +5,7 @@
 package fs
 
 import (
-	"github.com/ddliu/motto"
+	"github.com/dishuiGit/motto"
 	"testing"
 )
 

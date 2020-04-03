@@ -9,7 +9,7 @@ Motto provide a Nodejs like module environment to run javascript files in golang
 ## Installation
 
 ```bash
-go get github.com/ddliu/motto
+go get github.com/dishuiGit/motto
 ```
 
 ## Usage
@@ -24,8 +24,8 @@ module.exports = _.min(data);
 package main
 
 import (
-    "github.com/ddliu/motto"
-    _ "github.com/ddliu/motto/underscore"
+    "github.com/dishuiGit/motto"
+    _ "github.com/dishuiGit/motto/underscore"
 )
 
 func main() {
@@ -36,7 +36,7 @@ func main() {
 You can also install the motto command line tool to run it directly:
 
 ```bash
-go install github.com/ddliu/motto/motto
+go install github.com/dishuiGit/motto/motto
 motto path/to/index.js
 ```
 
@@ -54,7 +54,7 @@ Motto can be extended with addons, below is an example addon which implement par
 package fs
 
 import (
-    "github.com/ddliu/motto"
+    "github.com/dishuiGit/motto"
     "github.com/robertkrimen/otto"
 )
 
