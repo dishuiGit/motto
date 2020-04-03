@@ -4,13 +4,18 @@ import (
 	"github.com/dishuiGit/motto"
 	"github.com/robertkrimen/otto"
 	"github.com/huichen/sego"
+	"os"
+    "os/exec"
+	"path/filepath"
 )
 
 func cutModuleLoader(vm *motto.Motto) (otto.Value, error) {
 	fs, _ := vm.Object(`({})`)
+	file, _ := exec.LookPath(os.Args[0])
+	dir := filepath.Dir(file)
 	// 载入词典
 	var segmenter sego.Segmenter
-	segmenter.LoadDictionary("dictionary.txt")
+	segmenter.LoadDictionary(dir+"/dictionary.txt")
 	fs.Set("cut", func(call otto.FunctionCall) otto.Value {
 		str, _ := call.Argument(0).ToString()
 		var words []string
