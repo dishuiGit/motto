@@ -4,7 +4,6 @@ import (
 	"github.com/dishuiGit/motto"
 	"github.com/robertkrimen/otto"
 	"io/ioutil"
-	"os"
 )
 
 func fsModuleLoader(vm *motto.Motto) (otto.Value, error) {
