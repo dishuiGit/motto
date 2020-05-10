@@ -23,7 +23,7 @@ func fsModuleLoader(vm *motto.Motto) (otto.Value, error) {
 	fs.Set("writeFile", func(call otto.FunctionCall) otto.Value {
 		filePath, _ := call.Argument(0).ToString()
 		str, _ := call.Argument(1).ToString()
-		err:=ioutil.WriteFile(filePath, []byte(str),os.ModeAppend)
+		err:=ioutil.WriteFile(filePath, []byte(str),0644)
 		if err != nil {
 			return otto.UndefinedValue()
 		}
